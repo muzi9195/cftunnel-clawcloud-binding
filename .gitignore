@@ -2,3 +2,6 @@
 /.idea/
 /data/
 compose.yaml
+docker-compose.yaml
+compose.yml
+docker-compose.yml
