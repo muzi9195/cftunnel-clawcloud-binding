@@ -13,7 +13,7 @@ if [ -n "$TUNNEL_TOKEN" ] && [ -n "$(command -v "cloudflared")" ]; then
     nohup cloudflared tunnel --edge-ip-version auto --no-autoupdate --protocol http2 run --token "$TUNNEL_TOKEN" >/dev/null 2>&1 &
     echo "✅ Cloudflare Tunnel started in background."
 else
-    echo "⚠️ No TUNNEL_TOKEN found, skipping Tunnel startup."
+    echo "⚠️ TUNNEL_TOKEN or cloudflared not found, skipping Tunnel startup."
 fi
 
 echo "🚀 Run docker-entrypoint-origin.sh ..."
