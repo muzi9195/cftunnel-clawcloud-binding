@@ -1,6 +1,6 @@
 # sub-store-cf-tunnel
 
->   sub-store修改版镜像, 使用cloudflare tunnel隧道
+>   sub-store修改版docker镜像, 使用cloudflare tunnel隧道
 >
 >   解决clawcloud不能绑定域名的问题
 
@@ -16,7 +16,7 @@
 -   完成设置
 -   记录下 TUNNEL_TOKEN
 
-## 二、构建和部署
+## 二、构建镜像和部署
 
 ### 1.1 构建镜像(任选一种)
 
