@@ -6,7 +6,6 @@ ARG TARGETARCH
 ENV DOCKER_ARCH=${TARGETARCH}
 # cloudflared 环境变量默认值(初始化),如果不传 则不启动 cloudflared
 ENV TUNNEL_TOKEN=""
-ENV TUNNEL_DOMAIN=""
 
 # 把我们自己的“中间件”脚本复制进去
 COPY my_wrapper.sh /usr/local/bin/my_wrapper.sh
