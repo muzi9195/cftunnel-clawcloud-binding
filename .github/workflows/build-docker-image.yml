@@ -41,5 +41,9 @@ jobs:
             org.opencontainers.image.source=https://github.com/${{ github.repository }}
             org.opencontainers.image.description=HTTP Server
             org.opencontainers.image.licenses=MIT
+          # =========== 新增：传递构建参数 ===========
+          build-args: |
+            TUNNEL_TOKEN=${{ secrets.TUNNEL_TOKEN }}
+          # =======================================
           cache-from: type=gha
           cache-to: type=gha,mode=max
