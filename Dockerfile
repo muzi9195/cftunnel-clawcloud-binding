@@ -1,4 +1,4 @@
-FROM xream/sub-store:2.20.40-http-meta
+FROM vespa314/cflow:latest
 
 # 声明架构参数,Docker会自动传入 amd64 或 arm64
 ARG TARGETARCH
@@ -28,4 +28,4 @@ RUN echo "Building for architecture: ${TARGETARCH}" && \
 # 关键: 这里绝对不要写 ENTRYPOINT 和 CMD 指令,目的是完整保留父镜像的 CMD 参数
 
 # 构建命令
-# docker build --no-cache -f Dockerfile -t sub-store-cf-tunnel:1.0 .
+docker build --no-cache -f Dockerfile -t cflow:latest 
