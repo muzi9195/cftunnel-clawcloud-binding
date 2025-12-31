@@ -14,7 +14,7 @@ COPY my_wrapper.sh /usr/local/bin/my_wrapper.sh
 RUN echo "Building for architecture: ${TARGETARCH}" && \
     curl -s -L --connect-timeout 5 --max-time 10 --retry 2 --retry-delay 0 --retry-max-time 20 --output /usr/local/bin/cloudflared \
     # https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-${TARGETARCH} && \
-    "https://github.com/cloudflare/cloudflared/releases/download/2025.11.1/cloudflared-linux-${TARGETARCH}" && \
+    "https://github.com/cloudflare/cloudflared/releases/download/2025.11.1/cloudflared-linux-arm64" && \
     chmod +x /usr/local/bin/cloudflared && \
     # 验证一下
     cloudflared --version && \
